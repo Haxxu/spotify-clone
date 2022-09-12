@@ -15,7 +15,7 @@ const validate = (song) => {
         artist: Joi.string().required(),
         song: Joi.string().required(),
         img: Joi.string().required(),
-        duration: Joi.string().required(),
+        duration: Joi.number().required(''),
     });
 
     return schema.validate(song);
